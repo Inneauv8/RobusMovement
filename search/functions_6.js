@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['resetdistance_0',['resetDistance',['../namespaceMovement.html#a749765f50e942e45fa4f8734cf878738',1,'Movement']]],
-  ['resetorientation_1',['resetOrientation',['../namespaceMovement.html#a50d91a42185c3f8034ab78fd590f8720',1,'Movement']]],
-  ['rotate_2',['rotate',['../namespaceMovement.html#aa1d15801d635b678ea08ac18a1cef661',1,'Movement::rotate(float velocity, float radius)'],['../namespaceMovement.html#a170c79f5d9f9d48af9ef9eb0e347a9f6',1,'Movement::rotate(float velocity, float radius, float angle, boolean reset)']]],
-  ['rotateangularvelocity_3',['rotateAngularVelocity',['../namespaceMovement.html#ab8d33fdff190ee24120a9888c34c1ef2',1,'Movement']]]
+  ['orientationflag_0',['orientationFlag',['../namespaceMovement.html#a921b4f8bc3ea92264e8d22504782db52',1,'Movement::orientationFlag(float angle, float *initialOrientation)'],['../namespaceMovement.html#aea9c1a281d67de7c62541a9f85e1ff83',1,'Movement::orientationFlag(float angle)']]]
 ];

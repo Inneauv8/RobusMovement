@@ -114,10 +114,6 @@ Fonctions</h2></td></tr>
 <tr class="separator:ab8d33fdff190ee24120a9888c34c1ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53c94a82981a4b350d5b1803c4b9a1fd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMovement.html#a53c94a82981a4b350d5b1803c4b9a1fd">forward</a> (float velocity, float distance, boolean reset)</td></tr>
 <tr class="separator:a53c94a82981a4b350d5b1803c4b9a1fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a814c30370dc9161034bb9e3e1501c517"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMovement.html#a814c30370dc9161034bb9e3e1501c517">computeLeftMotorSpeed</a> ()</td></tr>
-<tr class="separator:a814c30370dc9161034bb9e3e1501c517"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a041b426651c996de6d6794d6693b301b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMovement.html#a041b426651c996de6d6794d6693b301b">computeRightMotorSpeed</a> ()</td></tr>
-<tr class="separator:a041b426651c996de6d6794d6693b301b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cbf174b6ce21126f7d749f03d50c280"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMovement.html#a5cbf174b6ce21126f7d749f03d50c280">setPIDAngular</a> (float Kp, float Ki, float Kd, float cutOff)</td></tr>
 <tr class="separator:a5cbf174b6ce21126f7d749f03d50c280"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a398ce670d2514e87c9b3901c7d491e39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMovement.html#a398ce670d2514e87c9b3901c7d491e39">setPIDVelocity</a> (float Kp, float Ki, float Kd, float cutOff)</td></tr>
@@ -128,10 +124,14 @@ Fonctions</h2></td></tr>
 <tr class="separator:ab1b051d01188343f472d55cc308a2ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a736f01d71264ed9754e24c853af416b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMovement.html#a736f01d71264ed9754e24c853af416b5">setAngularVelocity</a> (float angularVelocity)</td></tr>
 <tr class="separator:a736f01d71264ed9754e24c853af416b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3de20311a36affe812338b7347122192"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMovement.html#a3de20311a36affe812338b7347122192">getVelocity</a> ()</td></tr>
+<tr class="separator:a3de20311a36affe812338b7347122192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a181eecac1e76950e03bbbea69747da74"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMovement.html#a181eecac1e76950e03bbbea69747da74">getAngularVelocity</a> ()</td></tr>
+<tr class="separator:a181eecac1e76950e03bbbea69747da74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a680613451bf915bea74eab506008cba8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMovement.html#a680613451bf915bea74eab506008cba8">stop</a> ()</td></tr>
 <tr class="separator:a680613451bf915bea74eab506008cba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a139c19e9e943e62dfcb4cb05d075406c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMovement.html#a139c19e9e943e62dfcb4cb05d075406c">updatePIDs</a> ()</td></tr>
-<tr class="separator:a139c19e9e943e62dfcb4cb05d075406c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a611a530bb4b6d1c7bc701cc8017b8679"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMovement.html#a611a530bb4b6d1c7bc701cc8017b8679">update</a> ()</td></tr>
+<tr class="separator:a611a530bb4b6d1c7bc701cc8017b8679"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -160,23 +160,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a814c30370dc9161034bb9e3e1501c517" name="a814c30370dc9161034bb9e3e1501c517"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a814c30370dc9161034bb9e3e1501c517">&#9670;&#160;</a></span>computeLeftMotorSpeed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Movement::computeLeftMotorSpeed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a06b50bc9bf8af3dcede32da12f755847" name="a06b50bc9bf8af3dcede32da12f755847"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a06b50bc9bf8af3dcede32da12f755847">&#9670;&#160;</a></span>computeOrientation()</h2>
 
@@ -185,23 +168,6 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">float Movement::computeOrientation </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a041b426651c996de6d6794d6693b301b" name="a041b426651c996de6d6794d6693b301b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a041b426651c996de6d6794d6693b301b">&#9670;&#160;</a></span>computeRightMotorSpeed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Movement::computeRightMotorSpeed </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -285,6 +251,40 @@ Variables</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a181eecac1e76950e03bbbea69747da74" name="a181eecac1e76950e03bbbea69747da74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a181eecac1e76950e03bbbea69747da74">&#9670;&#160;</a></span>getAngularVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Movement::getAngularVelocity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3de20311a36affe812338b7347122192" name="a3de20311a36affe812338b7347122192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3de20311a36affe812338b7347122192">&#9670;&#160;</a></span>getVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Movement::getVelocity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -720,14 +720,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a139c19e9e943e62dfcb4cb05d075406c" name="a139c19e9e943e62dfcb4cb05d075406c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a139c19e9e943e62dfcb4cb05d075406c">&#9670;&#160;</a></span>updatePIDs()</h2>
+<a id="a611a530bb4b6d1c7bc701cc8017b8679" name="a611a530bb4b6d1c7bc701cc8017b8679"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a611a530bb4b6d1c7bc701cc8017b8679">&#9670;&#160;</a></span>update()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Movement::updatePIDs </td>
+          <td class="memname">void Movement::update </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['isinactive_0',['isInactive',['../namespaceMovement.html#a1a6e045df79eddcda3f77e91eeaca7d0',1,'Movement']]]
+  ['getangularvelocity_0',['getAngularVelocity',['../namespaceMovement.html#a181eecac1e76950e03bbbea69747da74',1,'Movement']]],
+  ['getvelocity_1',['getVelocity',['../namespaceMovement.html#a3de20311a36affe812338b7347122192',1,'Movement']]]
 ];
