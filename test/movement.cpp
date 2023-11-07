@@ -253,23 +253,9 @@ namespace Movement {
     
             rightVelocity += wantedRightMotorSpeed * dt;
             leftVelocity += wantedLeftMotorSpeed * dt;
-
-            rightVelocity = clamp(rightVelocity, -1, 1);
-            leftVelocity = clamp(leftVelocity, -1, 1);
-
-            Serial.print(angularPID.Sp);
-            Serial.print('\t');
-            Serial.println(angularPID.Pv);
-            //Serial.print('\t');
-            //Serial.print(velocityPID.Kp * velocityPID.previous_error);
-            //Serial.print('\t');
-            //Serial.println(velocityPID.Ki * velocityPID.integral);
-
-            //(Kp * error) + (Ki * integral) + (Kd * derivative)
-
     
-            MOTOR_SetSpeed(RIGHT, rightVelocity);
-            MOTOR_SetSpeed(LEFT, leftVelocity);
+            MOTOR_SetSpeed(RIGHT, clamp(rightVelocity, -1, 1));
+            MOTOR_SetSpeed(LEFT, clamp(leftVelocity, -1, 1));
         }
 
         PID::valeursPID velocityPID = {};
