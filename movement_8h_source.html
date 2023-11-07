@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Template:  Fichier source de src/movement.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Template
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">movement.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/****************************************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">Nom du fichier : movement.h</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">Auteur :                   </span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">Date de création : </span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">  </span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">****************************************************************************************/</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifndef PROTOTYPE_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define PROTOTYPE_H</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;LibRobus.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;mathX.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;pid.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;float.h&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#define WHEEL_BASE_DIAMETER 7.5 </span><span class="comment">//7.480315</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#define WHEEL_DIAMETER 2.992126</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define MAX_VELOCITY 30</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#define INACTIVE NAN</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceMovement.html">Movement</a></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">extern</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="namespaceMovement.html#a821c4e84c0e64e41e34cafb6c319f0a0">pulseToDist</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">extern</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="namespaceMovement.html#a0460eb797cf0c33f6ed785910dd08531">orientationOffset</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">extern</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="namespaceMovement.html#a82e8ecfc6cde5c42c0d680043ec28cde">distanceOffset</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structMovement_1_1WheelVelocities.html">   28</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structMovement_1_1WheelVelocities.html">WheelVelocities</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structMovement_1_1WheelVelocities.html#a89edc480a3e624d1da8ef7b27cf3d734">   29</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="structMovement_1_1WheelVelocities.html#a89edc480a3e624d1da8ef7b27cf3d734">rightVelocity</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structMovement_1_1WheelVelocities.html#a2e87d7ed163366bcb3babddd90cba089">   30</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="structMovement_1_1WheelVelocities.html#a2e87d7ed163366bcb3babddd90cba089">leftVelocity</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    };</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="namespaceMovement.html#a06b50bc9bf8af3dcede32da12f755847">computeOrientation</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="namespaceMovement.html#aea43cb7ee46074b144463242a3481791">computeDistance</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMovement.html#a50d91a42185c3f8034ab78fd590f8720">resetOrientation</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMovement.html#a749765f50e942e45fa4f8734cf878738">resetDistance</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceMovement.html#a077707d173a885f3249c054594274169">distanceFlag</a>(<span class="keywordtype">float</span> distance, <span class="keywordtype">float</span> *initialDistance);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceMovement.html#a921b4f8bc3ea92264e8d22504782db52">orientationFlag</a>(<span class="keywordtype">float</span> angle, <span class="keywordtype">float</span> *initialOrientation);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceMovement.html#a077707d173a885f3249c054594274169">distanceFlag</a>(<span class="keywordtype">float</span> distance);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceMovement.html#a921b4f8bc3ea92264e8d22504782db52">orientationFlag</a>(<span class="keywordtype">float</span> angle);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceMovement.html#a1a6e045df79eddcda3f77e91eeaca7d0">isInactive</a>(<span class="keywordtype">float</span> var);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMovement.html#aa1d15801d635b678ea08ac18a1cef661">rotate</a>(<span class="keywordtype">float</span> velocity, <span class="keywordtype">float</span> radius);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMovement.html#a7284b9fc1288b7d374d8b6f3bfd1657e">move</a>(<span class="keywordtype">float</span> velocity, <span class="keywordtype">float</span> angularVelocity);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMovement.html#ab806832c46ecc3cd5ed6ac8601f45e12">moveUnited</a>(<span class="keywordtype">float</span> velocity, <span class="keywordtype">float</span> radius, <span class="keywordtype">float</span> orientation);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceMovement.html#ab8d33fdff190ee24120a9888c34c1ef2">rotateAngularVelocity</a>(<span class="keywordtype">float</span> velocity, <span class="keywordtype">float</span> angularVelocity, <span class="keywordtype">float</span> angle, <span class="keywordtype">boolean</span> reset);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceMovement.html#aa1d15801d635b678ea08ac18a1cef661">rotate</a>(<span class="keywordtype">float</span> velocity, <span class="keywordtype">float</span> radius, <span class="keywordtype">float</span> angle, <span class="keywordtype">boolean</span> reset = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceMovement.html#a53c94a82981a4b350d5b1803c4b9a1fd">forward</a>(<span class="keywordtype">float</span> velocity, <span class="keywordtype">float</span> distance, <span class="keywordtype">boolean</span> reset = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="namespaceMovement.html#a814c30370dc9161034bb9e3e1501c517">computeLeftMotorSpeed</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="namespaceMovement.html#a041b426651c996de6d6794d6693b301b">computeRightMotorSpeed</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMovement.html#a5cbf174b6ce21126f7d749f03d50c280">setPIDAngular</a>(<span class="keywordtype">float</span> Kp, <span class="keywordtype">float</span> Ki, <span class="keywordtype">float</span> Kd, <span class="keywordtype">float</span> cutOff);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMovement.html#a398ce670d2514e87c9b3901c7d491e39">setPIDVelocity</a>(<span class="keywordtype">float</span> Kp, <span class="keywordtype">float</span> Ki, <span class="keywordtype">float</span> Kd, <span class="keywordtype">float</span> cutOff);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMovement.html#a306418fd93d9a239a4615287b53e32fe">setWheelSpeed</a>(<span class="keywordtype">float</span> rightWheelSpeed, <span class="keywordtype">float</span> leftWheelSpeed);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMovement.html#ab1b051d01188343f472d55cc308a2ea9">setVelocity</a>(<span class="keywordtype">float</span> speed);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMovement.html#a736f01d71264ed9754e24c853af416b5">setAngularVelocity</a>(<span class="keywordtype">float</span> angularVelocity);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMovement.html#a680613451bf915bea74eab506008cba8">stop</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMovement.html#a139c19e9e943e62dfcb4cb05d075406c">updatePIDs</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">namespace </span>{</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="comment">// *************************************************************************************************</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="comment">// VARIABLES LOCALES</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="comment">// *************************************************************************************************</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="comment">/* VIDE */</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keyword">extern</span> PID::valeursPID angularPID;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keyword">extern</span> PID::valeursPID velocityPID;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keyword">extern</span> <span class="keywordtype">float</span> rightVelocity;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keyword">extern</span> <span class="keywordtype">float</span> leftVelocity;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>}</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#endif </span><span class="comment">// PROTOTYPE_H</span></div>
+<div class="ttc" id="anamespaceMovement_html"><div class="ttname"><a href="namespaceMovement.html">Movement</a></div><div class="ttdef"><b>Definition:</b> movement.cpp:3</div></div>
+<div class="ttc" id="anamespaceMovement_html_a041b426651c996de6d6794d6693b301b"><div class="ttname"><a href="namespaceMovement.html#a041b426651c996de6d6794d6693b301b">Movement::computeRightMotorSpeed</a></div><div class="ttdeci">float computeRightMotorSpeed()</div><div class="ttdef"><b>Definition:</b> movement.cpp:173</div></div>
+<div class="ttc" id="anamespaceMovement_html_a0460eb797cf0c33f6ed785910dd08531"><div class="ttname"><a href="namespaceMovement.html#a0460eb797cf0c33f6ed785910dd08531">Movement::orientationOffset</a></div><div class="ttdeci">float orientationOffset</div><div class="ttdef"><b>Definition:</b> movement.cpp:6</div></div>
+<div class="ttc" id="anamespaceMovement_html_a06b50bc9bf8af3dcede32da12f755847"><div class="ttname"><a href="namespaceMovement.html#a06b50bc9bf8af3dcede32da12f755847">Movement::computeOrientation</a></div><div class="ttdeci">float computeOrientation()</div><div class="ttdef"><b>Definition:</b> movement.cpp:9</div></div>
+<div class="ttc" id="anamespaceMovement_html_a077707d173a885f3249c054594274169"><div class="ttname"><a href="namespaceMovement.html#a077707d173a885f3249c054594274169">Movement::distanceFlag</a></div><div class="ttdeci">bool distanceFlag(float distance, float *initialDistance)</div><div class="ttdef"><b>Definition:</b> movement.cpp:30</div></div>
+<div class="ttc" id="anamespaceMovement_html_a139c19e9e943e62dfcb4cb05d075406c"><div class="ttname"><a href="namespaceMovement.html#a139c19e9e943e62dfcb4cb05d075406c">Movement::updatePIDs</a></div><div class="ttdeci">void updatePIDs()</div><div class="ttdef"><b>Definition:</b> movement.cpp:221</div></div>
+<div class="ttc" id="anamespaceMovement_html_a1a6e045df79eddcda3f77e91eeaca7d0"><div class="ttname"><a href="namespaceMovement.html#a1a6e045df79eddcda3f77e91eeaca7d0">Movement::isInactive</a></div><div class="ttdeci">bool isInactive(float var)</div><div class="ttdef"><b>Definition:</b> movement.cpp:73</div></div>
+<div class="ttc" id="anamespaceMovement_html_a306418fd93d9a239a4615287b53e32fe"><div class="ttname"><a href="namespaceMovement.html#a306418fd93d9a239a4615287b53e32fe">Movement::setWheelSpeed</a></div><div class="ttdeci">void setWheelSpeed(float rightWheelSpeed, float leftWheelSpeed)</div><div class="ttdef"><b>Definition:</b> movement.cpp:202</div></div>
+<div class="ttc" id="anamespaceMovement_html_a398ce670d2514e87c9b3901c7d491e39"><div class="ttname"><a href="namespaceMovement.html#a398ce670d2514e87c9b3901c7d491e39">Movement::setPIDVelocity</a></div><div class="ttdeci">void setPIDVelocity(float Kp, float Ki, float Kd, float cutOff)</div><div class="ttdef"><b>Definition:</b> movement.cpp:195</div></div>
+<div class="ttc" id="anamespaceMovement_html_a50d91a42185c3f8034ab78fd590f8720"><div class="ttname"><a href="namespaceMovement.html#a50d91a42185c3f8034ab78fd590f8720">Movement::resetOrientation</a></div><div class="ttdeci">void resetOrientation()</div><div class="ttdef"><b>Definition:</b> movement.cpp:22</div></div>
+<div class="ttc" id="anamespaceMovement_html_a53c94a82981a4b350d5b1803c4b9a1fd"><div class="ttname"><a href="namespaceMovement.html#a53c94a82981a4b350d5b1803c4b9a1fd">Movement::forward</a></div><div class="ttdeci">bool forward(float velocity, float distance, boolean reset)</div><div class="ttdef"><b>Definition:</b> movement.cpp:137</div></div>
+<div class="ttc" id="anamespaceMovement_html_a5cbf174b6ce21126f7d749f03d50c280"><div class="ttname"><a href="namespaceMovement.html#a5cbf174b6ce21126f7d749f03d50c280">Movement::setPIDAngular</a></div><div class="ttdeci">void setPIDAngular(float Kp, float Ki, float Kd, float cutOff)</div><div class="ttdef"><b>Definition:</b> movement.cpp:188</div></div>
+<div class="ttc" id="anamespaceMovement_html_a680613451bf915bea74eab506008cba8"><div class="ttname"><a href="namespaceMovement.html#a680613451bf915bea74eab506008cba8">Movement::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdef"><b>Definition:</b> movement.cpp:216</div></div>
+<div class="ttc" id="anamespaceMovement_html_a7284b9fc1288b7d374d8b6f3bfd1657e"><div class="ttname"><a href="namespaceMovement.html#a7284b9fc1288b7d374d8b6f3bfd1657e">Movement::move</a></div><div class="ttdeci">void move(float velocity, float angularVelocity)</div><div class="ttdef"><b>Definition:</b> movement.cpp:81</div></div>
+<div class="ttc" id="anamespaceMovement_html_a736f01d71264ed9754e24c853af416b5"><div class="ttname"><a href="namespaceMovement.html#a736f01d71264ed9754e24c853af416b5">Movement::setAngularVelocity</a></div><div class="ttdeci">void setAngularVelocity(float angularVelocity)</div><div class="ttdef"><b>Definition:</b> movement.cpp:212</div></div>
+<div class="ttc" id="anamespaceMovement_html_a749765f50e942e45fa4f8734cf878738"><div class="ttname"><a href="namespaceMovement.html#a749765f50e942e45fa4f8734cf878738">Movement::resetDistance</a></div><div class="ttdeci">void resetDistance()</div><div class="ttdef"><b>Definition:</b> movement.cpp:26</div></div>
+<div class="ttc" id="anamespaceMovement_html_a814c30370dc9161034bb9e3e1501c517"><div class="ttname"><a href="namespaceMovement.html#a814c30370dc9161034bb9e3e1501c517">Movement::computeLeftMotorSpeed</a></div><div class="ttdeci">float computeLeftMotorSpeed()</div><div class="ttdef"><b>Definition:</b> movement.cpp:157</div></div>
+<div class="ttc" id="anamespaceMovement_html_a821c4e84c0e64e41e34cafb6c319f0a0"><div class="ttname"><a href="namespaceMovement.html#a821c4e84c0e64e41e34cafb6c319f0a0">Movement::pulseToDist</a></div><div class="ttdeci">float pulseToDist</div><div class="ttdef"><b>Definition:</b> movement.cpp:5</div></div>
+<div class="ttc" id="anamespaceMovement_html_a82e8ecfc6cde5c42c0d680043ec28cde"><div class="ttname"><a href="namespaceMovement.html#a82e8ecfc6cde5c42c0d680043ec28cde">Movement::distanceOffset</a></div><div class="ttdeci">float distanceOffset</div><div class="ttdef"><b>Definition:</b> movement.cpp:7</div></div>
+<div class="ttc" id="anamespaceMovement_html_a921b4f8bc3ea92264e8d22504782db52"><div class="ttname"><a href="namespaceMovement.html#a921b4f8bc3ea92264e8d22504782db52">Movement::orientationFlag</a></div><div class="ttdeci">bool orientationFlag(float angle, float *initialOrientation)</div><div class="ttdef"><b>Definition:</b> movement.cpp:46</div></div>
+<div class="ttc" id="anamespaceMovement_html_aa1d15801d635b678ea08ac18a1cef661"><div class="ttname"><a href="namespaceMovement.html#aa1d15801d635b678ea08ac18a1cef661">Movement::rotate</a></div><div class="ttdeci">void rotate(float velocity, float radius)</div><div class="ttdef"><b>Definition:</b> movement.cpp:77</div></div>
+<div class="ttc" id="anamespaceMovement_html_ab1b051d01188343f472d55cc308a2ea9"><div class="ttname"><a href="namespaceMovement.html#ab1b051d01188343f472d55cc308a2ea9">Movement::setVelocity</a></div><div class="ttdeci">void setVelocity(float velocity)</div><div class="ttdef"><b>Definition:</b> movement.cpp:208</div></div>
+<div class="ttc" id="anamespaceMovement_html_ab806832c46ecc3cd5ed6ac8601f45e12"><div class="ttname"><a href="namespaceMovement.html#ab806832c46ecc3cd5ed6ac8601f45e12">Movement::moveUnited</a></div><div class="ttdeci">void moveUnited(float velocity, float radius, float orientation)</div><div class="ttdef"><b>Definition:</b> movement.cpp:86</div></div>
+<div class="ttc" id="anamespaceMovement_html_ab8d33fdff190ee24120a9888c34c1ef2"><div class="ttname"><a href="namespaceMovement.html#ab8d33fdff190ee24120a9888c34c1ef2">Movement::rotateAngularVelocity</a></div><div class="ttdeci">bool rotateAngularVelocity(float velocity, float angularVelocity, float angle, boolean reset)</div><div class="ttdef"><b>Definition:</b> movement.cpp:116</div></div>
+<div class="ttc" id="anamespaceMovement_html_aea43cb7ee46074b144463242a3481791"><div class="ttname"><a href="namespaceMovement.html#aea43cb7ee46074b144463242a3481791">Movement::computeDistance</a></div><div class="ttdeci">float computeDistance()</div><div class="ttdef"><b>Definition:</b> movement.cpp:16</div></div>
+<div class="ttc" id="astructMovement_1_1WheelVelocities_html"><div class="ttname"><a href="structMovement_1_1WheelVelocities.html">Movement::WheelVelocities</a></div><div class="ttdef"><b>Definition:</b> movement.h:28</div></div>
+<div class="ttc" id="astructMovement_1_1WheelVelocities_html_a2e87d7ed163366bcb3babddd90cba089"><div class="ttname"><a href="structMovement_1_1WheelVelocities.html#a2e87d7ed163366bcb3babddd90cba089">Movement::WheelVelocities::leftVelocity</a></div><div class="ttdeci">float leftVelocity</div><div class="ttdef"><b>Definition:</b> movement.h:30</div></div>
+<div class="ttc" id="astructMovement_1_1WheelVelocities_html_a89edc480a3e624d1da8ef7b27cf3d734"><div class="ttname"><a href="structMovement_1_1WheelVelocities.html#a89edc480a3e624d1da8ef7b27cf3d734">Movement::WheelVelocities::rightVelocity</a></div><div class="ttdeci">float rightVelocity</div><div class="ttdef"><b>Definition:</b> movement.h:29</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>
