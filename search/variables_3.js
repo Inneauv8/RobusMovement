@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pulsetodist_0',['pulseToDist',['../namespaceMovement.html#a821c4e84c0e64e41e34cafb6c319f0a0',1,'Movement']]]
+  ['pulsetodist_0',['pulseToDist',['../namespaceRobusMovement.html#a02b1c87b92445416305adc0a9aeba747',1,'RobusMovement']]]
 ];

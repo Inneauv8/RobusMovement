@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['distanceflag_0',['distanceFlag',['../namespaceMovement.html#a077707d173a885f3249c054594274169',1,'Movement::distanceFlag(float distance, float *initialDistance)'],['../namespaceMovement.html#ac3690f607562fafeda3e2bc238aa3e65',1,'Movement::distanceFlag(float distance)']]]
+  ['distanceflag_0',['distanceFlag',['../namespaceRobusMovement.html#aae03d1161416ed8cc0c37c03e34ff2ca',1,'RobusMovement::distanceFlag(float distance, float *initialDistance)'],['../namespaceRobusMovement.html#acab98361e85089775f4c6a91d30a0052',1,'RobusMovement::distanceFlag(float distance)']]]
 ];

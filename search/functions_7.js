@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['resetdistance_0',['resetDistance',['../namespaceMovement.html#a749765f50e942e45fa4f8734cf878738',1,'Movement']]],
-  ['resetorientation_1',['resetOrientation',['../namespaceMovement.html#a50d91a42185c3f8034ab78fd590f8720',1,'Movement']]],
-  ['rotate_2',['rotate',['../namespaceMovement.html#aa1d15801d635b678ea08ac18a1cef661',1,'Movement::rotate(float velocity, float radius)'],['../namespaceMovement.html#a170c79f5d9f9d48af9ef9eb0e347a9f6',1,'Movement::rotate(float velocity, float radius, float angle, boolean reset)']]],
-  ['rotateangularvelocity_3',['rotateAngularVelocity',['../namespaceMovement.html#ab8d33fdff190ee24120a9888c34c1ef2',1,'Movement']]]
+  ['resetdistance_0',['resetDistance',['../namespaceRobusMovement.html#ac7445859316eafe8700f0b153f8656fa',1,'RobusMovement']]],
+  ['resetorientation_1',['resetOrientation',['../namespaceRobusMovement.html#a698c835aeb70c84a03c0743a2335c0c1',1,'RobusMovement']]],
+  ['rotate_2',['rotate',['../namespaceRobusMovement.html#ace28cb14886fe9672a3b2030ee0c2452',1,'RobusMovement::rotate(float velocity, float radius)'],['../namespaceRobusMovement.html#a558e6cc653816e1db5b4622b4fe11726',1,'RobusMovement::rotate(float velocity, float radius, float angle, boolean reset)']]],
+  ['rotateangularvelocity_3',['rotateAngularVelocity',['../namespaceRobusMovement.html#ac10eb32677001f556de8f0d5e8e74e10',1,'RobusMovement']]]
 ];

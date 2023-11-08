@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rightvelocity_0',['rightVelocity',['../structMovement_1_1WheelVelocities.html#a89edc480a3e624d1da8ef7b27cf3d734',1,'Movement::WheelVelocities']]]
+  ['rightvelocity_0',['rightVelocity',['../structRobusMovement_1_1WheelVelocities.html#a753648a3f5fd32fb3246d06b57c7df73',1,'RobusMovement::WheelVelocities']]]
 ];

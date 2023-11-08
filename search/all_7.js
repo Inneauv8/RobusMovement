@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['orientationflag_0',['orientationFlag',['../namespaceMovement.html#a921b4f8bc3ea92264e8d22504782db52',1,'Movement::orientationFlag(float angle, float *initialOrientation)'],['../namespaceMovement.html#aea9c1a281d67de7c62541a9f85e1ff83',1,'Movement::orientationFlag(float angle)']]],
-  ['orientationoffset_1',['orientationOffset',['../namespaceMovement.html#a0460eb797cf0c33f6ed785910dd08531',1,'Movement']]]
+  ['orientationflag_0',['orientationFlag',['../namespaceRobusMovement.html#a95d6e0f233b75d3bfdf15bd57e98a097',1,'RobusMovement::orientationFlag(float angle, float *initialOrientation)'],['../namespaceRobusMovement.html#af7e7607a6cce882b621a561300557d0f',1,'RobusMovement::orientationFlag(float angle)']]],
+  ['orientationoffset_1',['orientationOffset',['../namespaceRobusMovement.html#a1b34193172207ecffd707ecf39271bfa',1,'RobusMovement']]]
 ];

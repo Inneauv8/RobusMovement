@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['distanceflag_0',['distanceFlag',['../namespaceMovement.html#a077707d173a885f3249c054594274169',1,'Movement::distanceFlag(float distance, float *initialDistance)'],['../namespaceMovement.html#ac3690f607562fafeda3e2bc238aa3e65',1,'Movement::distanceFlag(float distance)']]],
-  ['distanceoffset_1',['distanceOffset',['../namespaceMovement.html#a82e8ecfc6cde5c42c0d680043ec28cde',1,'Movement']]]
+  ['distanceflag_0',['distanceFlag',['../namespaceRobusMovement.html#aae03d1161416ed8cc0c37c03e34ff2ca',1,'RobusMovement::distanceFlag(float distance, float *initialDistance)'],['../namespaceRobusMovement.html#acab98361e85089775f4c6a91d30a0052',1,'RobusMovement::distanceFlag(float distance)']]],
+  ['distanceoffset_1',['distanceOffset',['../namespaceRobusMovement.html#a37323c57f38a76c9944e6455bc228f04',1,'RobusMovement']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['distanceoffset_0',['distanceOffset',['../namespaceMovement.html#a82e8ecfc6cde5c42c0d680043ec28cde',1,'Movement']]]
+  ['distanceoffset_0',['distanceOffset',['../namespaceRobusMovement.html#a37323c57f38a76c9944e6455bc228f04',1,'RobusMovement']]]
 ];

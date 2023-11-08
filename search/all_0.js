@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['computedistance_0',['computeDistance',['../namespaceMovement.html#aea43cb7ee46074b144463242a3481791',1,'Movement']]],
-  ['computeorientation_1',['computeOrientation',['../namespaceMovement.html#a06b50bc9bf8af3dcede32da12f755847',1,'Movement']]]
+  ['computedistance_0',['computeDistance',['../namespaceRobusMovement.html#a55c3c7fb0236abce75126e3eba243c2c',1,'RobusMovement']]],
+  ['computeorientation_1',['computeOrientation',['../namespaceRobusMovement.html#a2ab5a16b448697cba1b63ec4faf4bafb',1,'RobusMovement']]]
 ];
