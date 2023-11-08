@@ -1,6 +1,6 @@
-#include "movement.h"
+#include "RobusMovement.h"
 
-namespace Movement {
+namespace RobusMovement {
 
     float pulseToDist = M_PI*WHEEL_DIAMETER/3200.0;
     float orientationOffset = 0;
@@ -253,13 +253,27 @@ namespace Movement {
     
             rightVelocity += wantedRightMotorSpeed * dt;
             leftVelocity += wantedLeftMotorSpeed * dt;
+
+            rightVelocity = clamp(rightVelocity, -1, 1);
+            leftVelocity = clamp(leftVelocity, -1, 1);
+
+            Serial.print(angularPID.Sp);
+            Serial.print('\t');
+            Serial.println(angularPID.Pv);
+            //Serial.print('\t');
+            //Serial.print(velocityPID.Kp * velocityPID.previous_error);
+            //Serial.print('\t');
+            //Serial.println(velocityPID.Ki * velocityPID.integral);
+
+            //(Kp * error) + (Ki * integral) + (Kd * derivative)
+
     
-            MOTOR_SetSpeed(RIGHT, clamp(rightVelocity, -1, 1));
-            MOTOR_SetSpeed(LEFT, clamp(leftVelocity, -1, 1));
+            MOTOR_SetSpeed(RIGHT, rightVelocity);
+            MOTOR_SetSpeed(LEFT, leftVelocity);
         }
 
-        PID::valeursPID velocityPID = {};
-        PID::valeursPID angularPID = {};
+        PID::valeursPID velocityPID = PID::valeursPID::create(0.7, 0, 0.07, 0);
+        PID::valeursPID angularPID = PID::valeursPID::create(2, 0, 0.07, 0);
         float rightVelocity = 0;
         float leftVelocity = 0;
         float realAngularVelocity = 0;

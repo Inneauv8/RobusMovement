@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "movement.h"
+#include "RobusMovement.h"
 #include <math.h>
 #include <unity.h>
 
@@ -18,23 +18,23 @@ const float unitedAngularVelocity[] = {0.5 * M_PI, -0.5 * M_PI, -0.72 * M_PI, 0.
 const float unitedMovementTimeSeconds[] = {2, 1, 3, 1.2, 5};
 
 float testRotation() {
-    Movement::resetDistance();
-    Movement::resetOrientation();
-    Movement::stop();
+    RobusMovement::resetDistance();
+    RobusMovement::resetOrientation();
+    RobusMovement::stop();
 
     float cummulativeError = 0;
     for (int i = 0; i < angularVelocityTestCount; i++) {
-        Movement::resetOrientation();
-        Movement::setAngularVelocity(angularVelocity[i]);
+        RobusMovement::resetOrientation();
+        RobusMovement::setAngularVelocity(angularVelocity[i]);
 
         long startTime = millis();
         while(millis() - startTime <= rotationTimeSeconds[i] * 1000) {
-            Movement::update();
+            RobusMovement::update();
         }
 
-        Movement::stop();
+        RobusMovement::stop();
 
-        float error = angularVelocity[i] * rotationTimeSeconds[i] - Movement::computeOrientation();
+        float error = angularVelocity[i] * rotationTimeSeconds[i] - RobusMovement::computeOrientation();
 
         cummulativeError += error;
     }
@@ -48,23 +48,23 @@ void test_rotation(void) {
 }
 
 float testVelocity() {
-    Movement::resetDistance();
-    Movement::resetOrientation();
-    Movement::stop();
+    RobusMovement::resetDistance();
+    RobusMovement::resetOrientation();
+    RobusMovement::stop();
 
     float cummulativeError = 0;
     for (int i = 0; i < velocityTestCount; i++) {
-        Movement::resetDistance();
-        Movement::setVelocity(velocity[i]);
+        RobusMovement::resetDistance();
+        RobusMovement::setVelocity(velocity[i]);
 
         long startTime = millis();
         while(millis() - startTime <= movementTimeSeconds[i] * 1000) {
-            Movement::update();
+            RobusMovement::update();
         }
 
-        Movement::stop();
+        RobusMovement::stop();
 
-        float error = velocity[i] * movementTimeSeconds[i] - Movement::computeDistance();
+        float error = velocity[i] * movementTimeSeconds[i] - RobusMovement::computeDistance();
 
         cummulativeError += error;
     }
@@ -78,25 +78,25 @@ void test_velocity(void) {
 }
 
 void test_united(void) {
-    Movement::stop();
+    RobusMovement::stop();
 
     float cummulativeAngularError = 0;
     float cummulativeVelocityError = 0;
     for (int i = 0; i < unitedTestCount; i++) {
-        Movement::resetDistance();
-        Movement::resetOrientation();
-        Movement::setVelocity(unitedVelocity[i]);
-        Movement::setAngularVelocity(unitedAngularVelocity[i]);
+        RobusMovement::resetDistance();
+        RobusMovement::resetOrientation();
+        RobusMovement::setVelocity(unitedVelocity[i]);
+        RobusMovement::setAngularVelocity(unitedAngularVelocity[i]);
 
         long startTime = millis();
         while(millis() - startTime <= unitedMovementTimeSeconds[i] * 1000) {
-            Movement::update();
+            RobusMovement::update();
         }
 
-        Movement::stop();
+        RobusMovement::stop();
 
-        float errorAngular = unitedAngularVelocity[i] * unitedMovementTimeSeconds[i] - Movement::computeOrientation();
-        float errorVelocity = unitedVelocity[i] * unitedMovementTimeSeconds[i] - Movement::computeDistance();
+        float errorAngular = unitedAngularVelocity[i] * unitedMovementTimeSeconds[i] - RobusMovement::computeOrientation();
+        float errorVelocity = unitedVelocity[i] * unitedMovementTimeSeconds[i] - RobusMovement::computeDistance();
 
         cummulativeAngularError += errorAngular;
         cummulativeVelocityError += errorVelocity;
@@ -109,9 +109,6 @@ void test_united(void) {
 void setup() {
     BoardInit();
 
-    Movement::setPIDVelocity(0.7, 0, 0.07, 0); //2, 0.0001, 0.001, 1
-    Movement::setPIDAngular(2, 0, 0.07, 0); //3, 0.0001, 0.001, 1
-
     UNITY_BEGIN();
     RUN_TEST(test_united);
     RUN_TEST(test_velocity);
@@ -120,5 +117,5 @@ void setup() {
 }
 
 void loop() {
-    Movement::update();
+    RobusMovement::update();
 }

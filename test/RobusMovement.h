@@ -19,7 +19,7 @@ Date de création :
 #define MAX_ANGULAR_VELOCITY MAX_VELOCITY / WHEEL_BASE_DIAMETER
 #define INACTIVE NAN
 
-namespace Movement
+namespace RobusMovement
 {
 
     extern float pulseToDist;

@@ -1,6 +1,6 @@
-#include "movement.h"
+#include "RobusMovement.h"
 
-namespace Movement {
+namespace RobusMovement {
 
     float pulseToDist = M_PI*WHEEL_DIAMETER/3200.0;
     float orientationOffset = 0;
@@ -272,8 +272,8 @@ namespace Movement {
             MOTOR_SetSpeed(LEFT, leftVelocity);
         }
 
-        PID::valeursPID velocityPID = {};
-        PID::valeursPID angularPID = {};
+        PID::valeursPID velocityPID = PID::valeursPID::create(0.7, 0, 0.07, 0);
+        PID::valeursPID angularPID = PID::valeursPID::create(2, 0, 0.07, 0);
         float rightVelocity = 0;
         float leftVelocity = 0;
         float realAngularVelocity = 0;

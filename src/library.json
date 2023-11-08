@@ -1,0 +1,13 @@
+{
+    "name":"RobusMovement",
+    "description":"Library for advanced movement command for Université de Sherbrooke Robus robot",
+    "keywords":"robus",
+    "authors":
+    [
+      {
+        "name": "Mathieu Durand",
+        "maintainer": true
+      }
+    ],
+    "version": "1.0.0"
+  }
