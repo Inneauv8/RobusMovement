@@ -22,7 +22,7 @@ namespace RobusMovement {
      * @return L'orientation du robot en radians.
      */
     float computeOrientation() {
-        float deltaS = (ENCODER_Read(LEFT) - ENCODER_Read(RIGHT)) * pulseToDist / 2.0;
+        float deltaS = (ENCODER_Read(RIGHT) - ENCODER_Read(LEFT)) * pulseToDist / 2.0;
         float theta = deltaS * 2 / (WHEEL_BASE_DIAMETER);
 
         return theta - orientationOffset;
@@ -275,7 +275,7 @@ namespace RobusMovement {
      * @param leftWheelSpeed La vitesse de la roue gauche.
      */
     void setWheelSpeed(float rightWheelSpeed, float leftWheelSpeed) {
-        float angularVelocity = (leftWheelSpeed - rightWheelSpeed) / WHEEL_BASE_DIAMETER;
+        float angularVelocity = (rightWheelSpeed - leftWheelSpeed) / WHEEL_BASE_DIAMETER;
         float velocity = (leftWheelSpeed + rightWheelSpeed) / 2.0;
         move(velocity, angularVelocity);
     }
@@ -327,7 +327,7 @@ namespace RobusMovement {
         float rightMotorSpeed = computeRightMotorSpeed();
         float leftMotorSpeed = computeLeftMotorSpeed();
     
-        realAngularVelocity = (leftMotorSpeed - rightMotorSpeed) / WHEEL_BASE_DIAMETER;
+        realAngularVelocity = (rightMotorSpeed - leftMotorSpeed) / WHEEL_BASE_DIAMETER;
         realVelocity = (rightMotorSpeed + leftMotorSpeed) / 2.0;
 
         updatePIDs();
@@ -390,8 +390,8 @@ namespace RobusMovement {
             angularPID.Pv = realAngularVelocity;
             float wantedAngularVelocity = angularPID.update();
 
-            float wantedRightMotorSpeed = wantedVelocity - (wantedAngularVelocity * WHEEL_BASE_DIAMETER) / 2.0;
-            float wantedLeftMotorSpeed = wantedVelocity + (wantedAngularVelocity * WHEEL_BASE_DIAMETER) / 2.0;
+            float wantedRightMotorSpeed = wantedVelocity + (wantedAngularVelocity * WHEEL_BASE_DIAMETER) / 2.0;
+            float wantedLeftMotorSpeed = wantedVelocity - (wantedAngularVelocity * WHEEL_BASE_DIAMETER) / 2.0;
     
             rightVelocity += wantedRightMotorSpeed * dt;
             leftVelocity += wantedLeftMotorSpeed * dt;
