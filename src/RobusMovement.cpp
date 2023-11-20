@@ -285,7 +285,9 @@ namespace RobusMovement {
      * @param velocity La vitesse linéaire du robot.
      */
     void setVelocity(float velocity) {
-        velocityPID.Sp = clamp(velocity, -MAX_VELOCITY, MAX_VELOCITY);
+        if (!isnan(velocity)) {
+            velocityPID.Sp = clamp(velocity, -MAX_VELOCITY, MAX_VELOCITY);
+        }
     }
 
     /**
@@ -293,7 +295,9 @@ namespace RobusMovement {
      * @param angularVelocity La vitesse angulaire du robot.
      */
     void setAngularVelocity(float angularVelocity) {
-        angularPID.Sp = clamp(angularVelocity, -MAX_ANGULAR_VELOCITY, MAX_ANGULAR_VELOCITY);;
+        if (!isnan(angularVelocity)) {
+            angularPID.Sp = clamp(angularVelocity, -MAX_ANGULAR_VELOCITY, MAX_ANGULAR_VELOCITY);;
+        }
     }
 
     /**
