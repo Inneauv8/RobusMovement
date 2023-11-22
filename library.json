@@ -13,7 +13,6 @@
     "dependencies": {
       "LibRobUS": "https://github.com/UdeS-GRO/LibRobUS",
       "MathX": "https://github.com/Inneauv8/MathX",
-      "PID": "https://github.com/Inneauv8/PID",
-      "ArduinoUnit": "*"
+      "PID": "https://github.com/Inneauv8/PID"
     }
   }
