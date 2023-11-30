@@ -13,7 +13,7 @@ Date de création :
 #include <pid.h>
 #include "float.h"
 
-#define WHEEL_BASE_DIAMETER 7.5 //7.480315
+#define WHEEL_BASE_DIAMETER 7.625 //7.480315
 #define WHEEL_DIAMETER 2.992126
 #define MAX_VELOCITY 30
 #define MAX_ANGULAR_VELOCITY MAX_VELOCITY / WHEEL_BASE_DIAMETER
